@@ -1,0 +1,10 @@
+{
+    "yaml.customTags": [
+        "!http mapping",
+        "!exe mapping",
+        "!unpack mapping"
+    ],
+    "yaml.schemas": {
+        "schema.json": ["/*"]
+    }
+}

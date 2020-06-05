@@ -1,0 +1,6 @@
+-   package: mnf/ger
+    downloader: !http
+        url:
+#        - activities.yaml
+#        - engines.yaml
+        - wagons.yaml

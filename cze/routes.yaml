@@ -1,0 +1,18 @@
+- package: rte/cze/321
+  version: "1.0"
+  authors: Martin030
+  source: http://www.trat321.cz/
+  resources:
+    - Trat 321
+
+- package: rte/cze/183
+  version: "1.0"
+  source: http://www.mojevlacky.cz/download/download/5-trate/179-trat-180-183
+  resources:
+    - Trat_183
+
+- package: rte/cze/BP
+  version: "1.0"
+  source: https://www.semora.cz/msts/
+  resources:
+    - Breclav - Praha

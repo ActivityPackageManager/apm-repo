@@ -1,0 +1,137 @@
+#https://tkanlokopage.webnode.cz
+
+-   package: act/cze/183/Snek/2020_R768
+    description: |
+        26. květen. Je květnové popoledne a ty jsi vystřídal kolegu na Esu 362-114 který přijel z Prahy. Tvým úkolem je odvézt
+        R 768 do Železné Rudy na dvou mašinách. Do Klatov pojedeš na Esu a v Klatovech přeskočíš do Brejlovce a odvezeš rychlík
+        do Železné Rudy. Ve skutečnosti si samozřejmě strojvedoucí nepřeskakují v Klatovech z mašiny na mašinu, ale pro zpestření
+        v aktivitě proč ne. Aktivita je tvořena výhradně pro OR a zkoušena ve verzi OR mono 62.2. Úloha je určena jen zkušeným
+        uživatelům, pro které není problém si vyměnit sem tam nějaký vůz, nebo mašinu.
+    authors: Šnek
+    version: "1.0"
+    source: https://tkanlokopage.webnode.cz/aktivity-openrails/trat-180-183/aktivity-snek/a2020/r-768-berounka/
+    downloader: !http
+        url:
+        - https://tkanlokopage.webnode.cz/_files/200035433-42cca42ccd/sne_r768or.zip
+    installer: !unpack
+        pathMap:
+            sne_r768or/ACTIVITIES/: ROUTES/Trat_183/ACTIVITIES/
+            sne_r768or/PATHS/: ROUTES/Trat_183/PATHS/
+            sne_r768or/SERVICES/: ROUTES/Trat_183/SERVICES/
+            sne_r768or/TRAFFIC/: ROUTES/Trat_183/TRAFFIC/
+            sne_r768or/CONSISTS/: TRAINS/CONSISTS/
+        exclude: sne_r768or/Snek
+    dependencies:
+        - rte/cze/183
+        - eng/cze/cd_362-114_hk
+        - wag/cze/cd_ABmz346_044
+        - wag/cze/cd_Bbdgmee236_055
+        - wag/cze/cd_Bmz234_505
+        - wag/cze/cd_Bmz234_520
+    #   CD_Bdmpee233_003
+        - eng/cze/cd_362-083_hk
+        - eng/cze/cd_363-036_hk
+
+-   package: act/cze/321/dvacka/NEx_47306
+    description: |
+        10. květen. Moje první aktivita tvořená pro OpenRails je vlak NEx 47306 z Valašského Meziříčí odkud povezeš ucelenku
+        Innofreightů do České Třebové. K chodu jsou potřeba vozidla mimo TBP jejichž seznam je doplněn. Aktivita je tvořena
+        výhradně pro OpenRails.
+    authors: dvacka
+    version: "1.0"
+    source: https://tkanlokopage.webnode.cz/aktivity-openrails/trat-321/aktivity-dvacka/a2020/nex-47306/
+    downloader: !http
+        url:
+        - https://tkanlokopage.webnode.cz/_files/200035347-c878ec8790/dv_nex47306or.zip
+    installer: !unpack
+        pathMap:
+            dv_nex47306or/ACTIVITIES/: ROUTES/Trat 321/ACTIVITIES/
+            dv_nex47306or/PATHS/: ROUTES/Trat 321/PATHS/
+            dv_nex47306or/SERVICES/: ROUTES/Trat 321/SERVICES/
+            dv_nex47306or/TRAFFIC/: ROUTES/Trat 321/TRAFFIC/
+            dv_nex47306or/CONSISTS/: TRAINS/CONSISTS/
+        exclude: dv_nex47306or/CTI
+#        exclude: dv_nex47306or/Vozidla
+    dependencies:
+        - rte/cze/321
+        - wag/ger/DB_Sgns696
+
+-   package: act/cze/321/Snek/2020_ec173
+    authors: Šnek
+    description: |
+        23. květen. Je letní poledne a ty se nacházíš na EC 173 v Bad Schandau na Vectronu 193-290, s kterým odvezeš EC 173 do Prahy.
+        Po cestě Tě čeká jedna výluka, ale jinak by to měla být pohodová cesta do hlavního města. Z důvodu, že se mi nelíbí až tak
+        vozy H Start, které tam pravidelně jezdí, nahradil jsem je klasickými maďarskými vozy Amz, Bmz. To jen na upřesněnou. Aktivita
+        je výhradně pro OR zkoušená ve verzi OR monogame 62,2. a je určena jen pro zkušené uživatele, kteří nemají problém si vyměnit
+        sem tam nějaký vůz nebo mašinu.
+    version: "1.0"
+    source: https://tkanlokopage.webnode.cz/aktivity-openrails/trat-321/aktivity-snek/a2020/ec-173-hungaria/
+    downloader: !http
+        url:
+        - https://tkanlokopage.webnode.cz/_files/200035410-cf4a6cf4a8/sne_ec173or.zip
+    installer: !unpack
+        pathMap:
+            sne_ec 173or/ACTIVITIES/: ROUTES/Trat 321/ACTIVITIES/
+            sne_ec 173or/PATHS/: ROUTES/Trat 321/PATHS/
+            sne_ec 173or/SERVICES/: ROUTES/Trat 321/SERVICES/
+            sne_ec 173or/TRAFFIC/: ROUTES/Trat 321/TRAFFIC/
+            sne_ec 173or/CONSISTS/: TRAINS/CONSISTS/
+        exclude: sne_ec 173or/Snek_173            
+    dependencies:
+        - rte/cze/183
+        - eng/cze/CD_193290
+        - eng/cze/TSS730628
+        - eng/cze/cd_362-114_hk
+-   package: act/cze/183/Snekml/2020_R776
+    description: |
+        28. květen. Je páteční dopoledne a ty jsi v depu Klatovy nastoupil na Brejlovce 754-074 s kterým odvezeš R 776
+        do Železné Rudy Alžbětína. Z důvodu výluky, kdy autobusy jezdí v úseku Dobřany - Klatovy, budeš muset zapřáhnout
+        náhradní soupravu a přeposunovat jí k nástupišti, kde počkáš na příjezd autobusů. Aktivita je dělaná podle skutečného
+        stavu ze dne 22.5.2020, jen místo 754-074 jela v té době 754-027. Jen pro zajímavost, ještě před prvním uvolňováním
+        vozila rychlíky řada 842 sólo. Úloha je tvořena výhradně do OR, testována ve verzi OR mono 62.2. a je určena jen pro
+        zkušenější uživatele, kterým nedělá problém si vyměnit sem tam nějaký vůz nebo lokomotivu.
+    authors: Šnek
+    version: "1.0"
+    source: https://tkanlokopage.webnode.cz/aktivity-openrails/trat-180-183/aktivity-snek-ml/a2020/r-776-berounka/
+    downloader: !http
+        url:
+        - https://tkanlokopage.webnode.cz/_files/200035465-9232792329/sneml_r776or.zip
+    installer: !unpack
+        pathMap:
+            sneml_r776or/ACTIVITIES/: ROUTES/Trat_183/ACTIVITIES/
+            sneml_r776or/PATHS/: ROUTES/Trat_183/PATHS/
+            sneml_r776or/SERVICES/: ROUTES/Trat_183/SERVICES/
+            sneml_r776or/TRAFFIC/: ROUTES/Trat_183/TRAFFIC/
+            sneml_r776or/CONSISTS/: TRAINS/CONSISTS/
+        exclude: sneml_r776or/Snek
+    dependencies:
+        - rte/cze/183
+-   package: act/cze/BP/DanJ/2017_KissExpress
+    description: |
+        20.5.2017 byly vypraveny z Prahy a Bohumína zvláštní vlaky na koncert americké skupiny KISS v Brně. Z Prahy do Brna to byl zvláštní vlak Ex 10953 Kiss expres
+        a zpět do Prahy se vracel jako Kiss expres 10954. Z Bohumína vyrazil "Kisák" v závěsu za Ex 131 Vrasovia do Břeclavi a z Břeclavi pokračoval jako Kiss expres
+        10956 do Brna. zpět se vracel jako Kiss expres 10955. Vy v této aktivitě pro OpenRails povezete v onen jarní květnový den, nejprve Ex 131 Varsovii v čele s lokomotivou
+        ČD 380.002-6 z Bohumína do Břeclavi a vozy pro "Kisák" budete mít zavěšeny na konci soupravy. V Břeclavi si "Plecháč" ČD 242.272-3 přebere vozy a jako
+        Kiss Expres 10956 pokračuje do Brna. Vy v této aktivitě převezmete úlohu strojvedoucího na tamto vlaku, zatím co Varsovia odjede z Břeclavi směr Slovensko,
+        již jako vámi neřízený vlak.
+    authors: Dan J.
+    version: "1.0"
+    source: http://mojevlacky.cz/aktivity-trate-bp/5-ex-10956-kiss-expres
+    resources:
+        - Breclav - Praha/DJ_BP_Kiss_Expres
+    installer: !unpack
+        pathMap:
+            DJ_BP_Kiss_expres/ROUTES/: ROUTES/
+            DJ_BP_Kiss_expres/TRAINS/: TRAINS/
+        exclude: DJ_BP_Kiss_expres/DJ_BP_Kiss_expres
+    dependencies:
+        - rte/cze/BP
+        - wag/cze/cd_Bmz234_505
+        - wag/cze/cd_Bmz234_520
+        - wag/cze/cd_Bbdgmee236_055
+        - eng/cze/cd_363009
+        - wag/cze/Gbkkqs
+        - eng/cze/cd_362021_hk
+        - eng/cze/cd_362121_hk
+        - eng/cze/cd_362175_hk
+        - eng/pol/D-DISPO_189153_BTS

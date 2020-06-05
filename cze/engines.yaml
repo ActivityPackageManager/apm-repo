@@ -1,0 +1,107 @@
+#http://modely-msts.cz
+-   package: eng/cze/cd_162012_hk
+    resources:
+        - cd_162-012_hk/cd_162012_hk
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cd_162-012.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: eng/cze/cdc_163036
+    resources:
+        - cdc_163-036/cdc_163036
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cdc_163-036.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: eng/cze/cd_163244_hk
+    resources:
+        - cd_163-244_hk/cd_163244_hk
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cd_163-244.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: eng/cze/cd_362021_hk
+    resources:
+        - cd_362-021_hk/cd_362021_hk
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cd_362-021.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: eng/cze/cd_362121_hk
+    resources:
+        - cd_362-121_hk/cd_362121_hk
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cd_362-121.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: eng/cze/cd_362175_hk
+    resources:
+        - cd_362-175_hk/cd_362175_hk
+    authors: Bob
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/cd_362-175.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""
+
+-   package: inc/193(383)
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://modely-msts.cz/modely/ORTS/Siemens.rar
+    installer: !unpack {}
+
+#https://trainset.simtrains.eu
+-   package: eng/cze/cd_163090_hk
+    resources:
+        - cd_163-090_hk/cd_163090_hk
+    authors: Daniel Marek, kulica
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://trainset.simtrains.eu/dmar_files/cd_163-090_hk_model.zip
+        - https://trainset.simtrains.eu/dmar_files/cd_163-090_hk_chovani.zip
+    installer: !unpack {}
+-   package: eng/cze/cd_363009
+    resources:
+        - cdc_363-009_2015/cdc_363009_2015
+        - Wag/cdc_363-009_2015/cdc_363009ms_2015
+    authors: Lukyn-cz, kulica
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://trainset.simtrains.eu/luk_files/cdc_363-009_2015_model.zip
+        - https://trainset.simtrains.eu/luk_files/cdc_363-009_2015_chovani.zip
+    installer: !unpack
+        pathSuffix: trains/trainset
+-   package: eng/cze/rj_162118_hk
+    resources:
+        - rj_162-118_hk/rj_162118_hk
+    authors: Zbynda, kulica
+    version: "1.3"
+    downloader: !http
+        url:
+         - https://trainset.simtrains.eu/zbyn_files/rj_162118_hk_model.zip
+         - https://trainset.simtrains.eu/zbyn_files/rj_162118_hk_chovani.zip
+    installer: !unpack {}

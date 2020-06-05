@@ -1,0 +1,12 @@
+-   package: eng/pol/D-DISPO_189153_BTS
+    resources:
+        - D-DISPO_189153_BTS/189153AC
+        - D-DISPO_189153_BTS/189153AC_PV
+        - D-DISPO_189153_BTS/189153DC
+        - D-DISPO_189153_BTS/189153DC_PV
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://www.trainsimsicilia.net/Download/Train-Simulator/Locomotive/Straniere/D-DISPO_189153_BTS.rar
+    installer: !unpack
+        pathSuffix: trains/trainset

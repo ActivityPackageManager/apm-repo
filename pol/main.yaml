@@ -1,0 +1,7 @@
+-   package: mnf/pol
+    downloader: !http
+        url:
+#        - activities.yaml
+        - engines.yaml
+#        - wagons.yaml
+#        - routes.yaml

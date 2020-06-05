@@ -1,0 +1,7 @@
+-   package: mnf/root
+    downloader: !http
+        url:
+        - cze/main.yaml
+        - ger/main.yaml
+        - svk/main.yaml
+        - pol/main.yaml        

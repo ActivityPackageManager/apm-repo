@@ -1,0 +1,196 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "additionalItems": false,
+    "items": {
+        "allOf": [
+            {
+                "$id": "#/packages",
+                "type": "object",
+                "title": "Packages list",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "package": "eng/cze/cd_162012_hk",
+                        "vehicles": [
+                            "cd_162-012_hk/cd_162012_hk"
+                        ],
+                        "authors": "Bob",
+                        "version": 1,
+                        "downloader": null,
+                        "installer": null
+                    }
+                ],
+                "required": [
+                    "package"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "package": {
+                        "$id": "#package",
+                        "type": "string",
+                        "title": "The package schema",
+                        "description": "Package unique ID in format <package type>/<country>/<package name(s)>",
+                        "default": "",
+                        "examples": [
+                            "eng/cze/cd_162012_hk",
+                            "wag/cze/d_Bbdgmee236_055",
+                            "act/cze/route/author/activityname"
+                        ]
+                    },
+                    "description": {
+                        "$id": "#package/description",
+                        "type": "string",
+                        "title": "The package schema",
+                        "description": "Package description",
+                        "default": ""
+                    },
+                    "source": {
+                        "$id": "#package",
+                        "type": "string",
+                        "title": "The package schema",
+                        "description": "Source URL of this package",
+                        "default": "",
+                        "examples": [
+                            "http://openrails-resources/myactivity"
+                        ]
+                    },
+                    "resources": {
+                        "$id": "#package/resources",
+                        "type": "array",
+                        "title": "The vehicles schema",
+                        "description": "Which resources this package contains. Depends on package type\nWagon (wag) or Engine (eng): <dirname>/<wag or eng filename>\nActivity (act): <route name>/<activity file name>\nRoute (rte): <Route folder name>",
+                        "default": [],
+                        "examples": [
+                            [
+                                "cd_162-012_hk/cd_162012_hk"
+                            ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/resources/items/anyOf/0",
+                                    "type": "string",
+                                    "title": "The first anyOf schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "cd_162-012_hk/cd_162012_hk"
+                                    ]
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/resources/items"
+                        }
+                    },
+                    "authors": {
+                        "$id": "#/items/anyOf/0/properties/authors",
+                        "type": "string",
+                        "title": "The authors schema",
+                        "description": "Author or authors of package content",
+                        "default": "",
+                        "examples": [
+                            "Bob"
+                        ]
+                    },
+                    "version": {
+                        "$id": "#/items/anyOf/0/properties/version",
+                        "type": "string",
+                        "title": "The version schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "1.0",
+                        "examples": [
+                            "1.0"
+                        ]
+                    },
+                    "downloader": {
+                        "$id": "#/items/anyOf/0/properties/downloader",
+                        "type": "object",
+                        "title": "The downloader schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": null,
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "installer": {
+                        "$id": "#/package/installer",
+                        "type": "object",
+                        "title": "The installer schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": null,
+                        "examples": [
+                            null
+                        ],
+                        "anyOf": [
+                            {
+                                "$id": "#/package/installer/exeInstaller",
+                                "type": "object",
+                                "title": "Exe installer",
+                                "description": "An explanation about the purpose of this instance.",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "arguments" : {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            {
+                                "$id": "#/package/installer/unpackInstaller",
+                                "type": "object",
+                                "title": "Unpack installer",
+                                "description": "An explanation about the purpose of this instance.",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "pathMap" : {
+                                        "type": "object"
+                                    },
+                                    "exclude" : {
+                                        "type": "string"
+                                    },
+                                    "pathSuffix" : {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "dependencies": {
+                        "$id": "#/items/anyOf/0/properties/dependencies",
+                        "type": "array",
+                        "title": "The vehicles schema",
+                        "description": "Package dependencies",
+                        "default": [],
+                        "examples": [
+                            [
+                                "eng/cze/cd_162012_hk"
+                            ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/dependencies/items/anyOf/0",
+                                    "type": "string",
+                                    "title": "The first anyOf schema",
+                                    "description": "Dependency package ID",
+                                    "default": "",
+                                    "examples": [
+                                        "eng/cze/cd_162012_hk"
+                                    ]
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/dependencies/items"
+                        }
+                    }
+                }
+            }
+        ],
+        "$id": "#/items"
+    }
+}

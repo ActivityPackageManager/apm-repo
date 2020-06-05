@@ -1,0 +1,9 @@
+-   package: eng/svk/zssk_350-003_hk
+    resources:
+        - zssk_350-003_hk/zssk_350003_hk
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://modely-msts.cz/modely/ORTS/zssk_350-003_OR.exe
+    installer: !exe
+        arguments: /DIR=""<INSTALLPATH>""

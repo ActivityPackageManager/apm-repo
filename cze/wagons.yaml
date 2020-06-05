@@ -1,0 +1,57 @@
+-   package: wag/cze/cd_Bbdgmee236_055
+    resources:
+        - cd_Bbdgmee236_055/cd_Bbdgmee236_055
+    authors: Čouda, Viaxern, M.Hůrka
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://trainset.simtrains.eu/via_files/cd_Bbdgmee236_055_model.zip
+        - https://trainset.simtrains.eu/via_files/cd_Bbdgmee236_055_chovani.zip
+    installer: !unpack {}
+
+#https://pikku.msts.cz
+-   package: wag/cze/cd_Bmz234_505
+    resources:
+        - cd_Bmz234_505/cd_Bmz234_505
+    authors: Jiří Tovačovský, RicarCZ
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://docs.google.com/uc?authuser=0&id=0B9ESVU9P34uSYVdvVW5rcXItUU0&export=download
+    installer: !unpack
+        pathSuffix: trains/trainset
+-   package: wag/cze/cd_Bmz234_520
+    resources:
+        - cd_Bmz234_520/cd_Bmz234_520
+    authors: Jiří Tovačovský, RicarCZ
+    version: "1.0"
+    downloader: !http
+        url:
+        - https://docs.google.com/uc?authuser=0&id=0B9ESVU9P34uSSldGczhUTS1lbTg&export=download
+    installer: !unpack
+        pathSuffix: trains/trainset
+-   package: wag/cze/cd_ABmz346_044
+    resources:
+        - cd_ABmz346_044/cd_ABmz346_044
+    authors: Jiří Tovačovský, Daniel Marek
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://msts-rw.cz/msts/ovozne/cd_ABmz346.exe
+    installer: !exe {}
+
+#http://xtrain.alsat.sk/msts/freight/freight.htm
+-   package: wag/cze/Gbkkqs
+    resources:
+        - Cp_Gbkkqs/Cp_Gbkkqs
+    authors: Kebarko, Vogeltanz
+    version: "1.0"
+    downloader: !http
+        url:
+        - http://xtrain.alsat.sk/download/msts-freight/cp-gbkkqs.zip
+#rename Cp_Gbkkqs.s ->CD_Gbkkqs.s
+    installer: !unpack
+        pathSuffix: trains/trainset
+
+
+
